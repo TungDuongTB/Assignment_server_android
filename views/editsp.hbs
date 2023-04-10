@@ -1,0 +1,41 @@
+<div class="container w-50 p-5 my-5 shadow">
+
+
+    {{!-- Title --}}
+    <h1 class="text-center">{{task}}</h1>
+    {{!-- Form --}}
+    <form method="post" action="{{sp._id}}">
+        
+        <div class="mb-3">
+            <label  class="form-label">Mã sản phẩm</label>
+            <input name="masp" value="{{sp.masp}}" type="text" class="form-control"  required>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Tên sản phẩm</label>
+            <input name="tensp" value="{{sp.name}}" type="text" class="form-control"  required>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Đơn giá</label>
+            <input name="price" value="{{sp.price}}" type="number" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Màu sắc</label>
+            <input name="mau" value="{{sp.mau}}" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Loại sản phẩm</label>
+            <input name="loaisp" value="{{sp.loaisp}}" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Mã khách hàng</label>
+            <input name="makh" value="{{sp.makh}}" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Tên khách hàng</label>
+            <input name="tenkh" value="{{sp.tenkh}}" type="text" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        
+    </form>
+
+</div>

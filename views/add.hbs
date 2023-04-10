@@ -1,0 +1,29 @@
+<div class="container w-50 p-5 my-5 shadow">
+
+
+    {{!-- Title --}}
+    <h1 class="text-center">{{task}}</h1>
+    {{!-- Form --}}
+    <form method="post" action="/users/add">
+        
+        <div class="mb-3">
+            <label for="inputUsername" class="form-label">Username</label>
+            <input name="username" type="text" class="form-control" aria-describedby="usernameHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputUsername" class="form-label">Họ và tên</label>
+            <input name="name" type="text" class="form-control" aria-describedby="usernameHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input name="password" type="password" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label">Email</label>
+            <input name="email" type="text" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        
+    </form>
+
+</div>

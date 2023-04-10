@@ -1,0 +1,40 @@
+<div class="container w-50 p-5 my-5 shadow">
+
+
+    {{!-- Title --}}
+    <h1 class="text-center">{{task}}</h1>
+    {{!-- Form --}}
+    <form method="post" action="{{actionTask}}">
+        <a class="btn btn-default" href="back" role="button">Back</a>
+        <a class="btn btn-primary" href="add" role="button">Thêm</a>
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each list}}
+                <tr>
+                    <td scope="row">{{@index}}</td>
+                    <td>{{name}}</td>
+                    <td>{{email}}</td>
+                    <td>
+                        <a href="delete/{{_id}}" class="btn btn-default" onclick="return confirm('Đồng ý xóa không?')">Xóa<i class="glyphicon glyphicon-trash"></i></a>
+                        <a href="edit/{{_id}}" class="btn btn-default">Sửa<i class="glyphicon glyphicon-pencil"></i></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </form>
+    {{!-- Notify --}}
+    <div class="row">
+        <code>{{notify}}</code>
+    </div>
+    
+
+</div>
